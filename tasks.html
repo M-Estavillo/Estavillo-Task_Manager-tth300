@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Task Manager</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="tasks.html" class="active">Tasks</a>
+            <a href="add-task.html">Add Task</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>All Tasks</h2>
+            <a href="add-task.html" class="btn btn-primary">Add Task</a>
+        </div>
+
+        <div class="filters">
+            <select id="filter-status" class="filter-select">
+                <option value="">All Statuses</option>
+                <option value="To Do">To Do</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Done">Done</option>
+            </select>
+            <select id="filter-priority" class="filter-select">
+                <option value="">All Priorities</option>
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <select id="sort-by" class="filter-select">
+                <option value="created-desc">Newest First</option>
+                <option value="created-asc">Oldest First</option>
+                <option value="due-asc">Due Date (Soonest)</option>
+                <option value="due-desc">Due Date (Latest)</option>
+                <option value="title-asc">Title (A-Z)</option>
+                <option value="title-desc">Title (Z-A)</option>
+            </select>
+        </div>
+
+        <div id="tasks-list" class="task-list"></div>
+    </main>
+
+    <script src="js/taskService.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            App.initTaskList();
+        });
+    </script>
+</body>
+</html>

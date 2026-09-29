@@ -1,0 +1,17 @@
+{
+  "name": "mini-information-system",
+  "version": "1.0.0",
+  "description": "A simple task management web system with an Express API and MySQL backend.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4"
+  }
+}
